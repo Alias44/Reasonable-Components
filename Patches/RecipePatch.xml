@@ -1,0 +1,23 @@
+<Patch>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "FabricationBench" or defName="VFE_ComponentFabricationBench"]/recipes/li[text()="Make_ComponentIndustrial"]</xpath>
+		<value>
+			<li>Make_ComponentIndustrial</li>
+			<li>Make5Components</li>
+			<li>Make10Components</li>
+			<li>Make25Components</li>
+			<li>Make50Components</li>
+			<li>Make100Components</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "FabricationBench" or defName="VFE_ComponentFabricationBench"]/recipes/li[text()="Make_ComponentSpacer"]</xpath>
+		<value>
+			<li>Make_ComponentSpacer</li>
+			<li>Make5AdvComponents</li>
+			<li>Make10AdvComponents</li>
+			<li>Make25AdvComponents</li>
+		</value>
+	</Operation>
+</Patch>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Add a name to the component recipe so that it can be used as the base for the bulk recipes -->
+	<Operation Class="PatchOperationAttributeAdd">
+		<xpath>Defs/RecipeDef[defName="Make_ComponentIndustrial"]</xpath>
+		<attribute>Name</attribute>
+		<value>Make_ComponentIndustrial</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+	  <xpath>/Defs/RecipeDef[defName = "Make_ComponentIndustrial"]/ingredients</xpath>
+	  <value>
+		<ingredients>
+			<li>
+			<filter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+			</filter>
+			<count>10</count>
+			</li>
+		</ingredients>
+	  </value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+	  <xpath>/Defs/RecipeDef[defName = "Make_ComponentIndustrial"]/workAmount</xpath>
+	  <value>
+		<workAmount>1000</workAmount>
+	  </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAttributeAdd">
+		<xpath>Defs/RecipeDef[defName="Make_ComponentSpacer"]</xpath>
+		<attribute>Name</attribute>
+		<value>Make_ComponentSpacer</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	  <xpath>/Defs/RecipeDef[defName = "Make_ComponentSpacer"]/ingredients</xpath>
+	  <value>
+		<ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>0.3</count>
+      </li>
+    </ingredients>
+	  </value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+	  <xpath>/Defs/RecipeDef[defName = "Make_ComponentSpacer"]/workAmount</xpath>
+	  <value>
+		<workAmount>2000</workAmount>
+	  </value>
+	</Operation>
+</Patch>
